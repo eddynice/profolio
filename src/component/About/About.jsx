@@ -1,34 +1,37 @@
-import React,{useState} from "react";
+
 import "./about.css";
 import com from "../../asset/osas.jpg"
-import {AboutId} from "../../files";
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
 
 
-console.log(AboutId[0].about)
-const About =({para})=>{
-    const ListItem= ["REACT","JAVASCRIPT", "PHP", "EXPRESS","HTML"];
+const About =()=>{
+    const ListItem= ["React","Javascript", "PHP", "Express","Html","Material-UI","Css"];
+    const LlistItem= ["Node","MongoDB", "Mysqli", "Redux/Redux-saga","Next.JS","Bootstap"];
+    
     const List = ListItem.map((num)=>
     <li key={num} className="li">{num}</li>)
-console.log(ListItem)
 
- //const [task1, settask] = useState(task)
+    const Lists = LlistItem.map((num)=>
+    <li key={num} className="li">{num}</li>)
 
-
+   
 
     return(
-        <About1>
+        <About1 id="about">
             <div className="aboutItem">
             <h2>More about me</h2>
-                <p>{para}to tickle my brain and love teaching others how they're made.</p><br/>
-                <p>{para}I build new projects just to tickle my brain and love teaching others how they're made.</p><hr/>
+                <p>I'm a Fullstack Software Engineer and a technology enthusiast who is passionate about problem solving and adapts well to change.
+						I'm a diverse individual who loves to integrate and contribute meaningfully to the progress of any team I'm opportune to work with.
+						My objectives are to create meaningful and useful products, and be a valuable member of my stakeholders. <br/>
+						I enjoy algorithms, mentoring, writing, gaming, and meeting new people.</p><br/>
+                <p>I build new projects just to tickle my brain and love teaching others how they're made.</p><hr/>
                  <h2>Top Expert</h2>
 
                  <p>Fullstack developer with primary focus on Django + React: Download Resume</p>
                  <ListContainer>
                  <div className="ul">{List}</div>
-                        <div className="ul">{List}</div>       
+                        <div className="ul">{Lists}</div>       
                 </ListContainer>
 
             </div>
@@ -73,9 +76,7 @@ display: flex;
     justify-content: space-around;
     background-color:  ${props => props.theme.previewShadow};
 @media (max-width: 800px) {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    
 }
 `;
 const NavLin = styled(Link)`

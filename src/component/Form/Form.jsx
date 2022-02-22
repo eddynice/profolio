@@ -3,7 +3,7 @@ import React,{ useState} from 'react';
 import styled from 'styled-components';
 import "./foem.css"
 const Form=()=>{
-	const [text, setText]=useState('') 
+	const [name, setName]=useState('') 
 	const [email, setEmail]=useState('')
 	const [sub, setSub]=useState('')
 	const [message, setMessage]=useState('')
@@ -13,15 +13,20 @@ const Form=()=>{
 	const submitForm = (e)=>{ 
 		e.preventDefault();
 		const Sub={
-			text:text,
+			name:name,
 			email:email,
 			sub:sub,
 			message:message,
 
 		}
 		console.log(Sub)
-		fetch.post("/messages/",Sub);
-        setText('')
+		//axios.post('http://localhost:5000:/post').then(resp => {
+fetch("http://localhost:5000/post/post",
+{
+	body: Sub,
+	method: "post"
+});
+        setName('')
 		setEmail()
 		setSub('')
 		setMessage('')
@@ -31,16 +36,16 @@ const Form=()=>{
     return(
         <Forms>
             <h2 className="h2">Get In Touch</h2>
-            <FormContact form className="contact-form" onSubmit={submitForm}> 
+            <FormContact id="form" className="contact-form" onSubmit={submitForm}> 
             <label>Name</label>
-				<Input type="text "
+				<Input type="name "
 				 className="input-field"
-				   value={text}
-				   onChange={(e)=>setText(e.target.value)}
+				   value={name}
+				   onChange={(e)=>setName(e.target.value)}
 				   />
 
 				<label>subject</label>
-				<Input type="text" className="input-field"
+				<Input type="name" className="input-field"
 				 value={email}
 				 onChange={(e)=>setEmail(e.target.value)}
 				/>
@@ -59,7 +64,7 @@ const Form=()=>{
 				name="Messages">
 					
 				</TextArea> 
-				<Input type="submit" id="submit-btn" value='subit'/>
+				<Button type="submit">SUBMIT</Button>
             </FormContact>
         </Forms>
 
@@ -89,9 +94,6 @@ const Input = styled.input`
     border: 1px solid ${props => props.theme.borderColor};
 `;
 
-const Label = styled.label`
-line-height: 2.7em;
-`;
 
 const TextArea = styled.textarea`
 min-height: 100px;
@@ -106,6 +108,6 @@ const Button = styled.button`
     padding-top: 10px;
     padding-bottom: 10px;
     color: #fff;
-    background-color: var(--buttonColor);
+    background-color:${props => props.theme.buttonColor};
     border: none;
 `

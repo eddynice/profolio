@@ -6,7 +6,7 @@ const Globalsty = createGlobalStyle `
 *{
     margin: 0;
     padding: 0;
-    font-family:Open-Sans, Helvetica, Sans-Serif;
+    font-family: 'Josefin Sans', sans-serif
     transition: all 0.3s ease 0s;
     scroll-behavior: smooth;
 

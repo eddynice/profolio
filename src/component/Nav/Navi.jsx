@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 
 const Wrapper=styled.div`
 display: flex;
@@ -44,16 +44,7 @@ const Nav =styled.div`
   justify-content: flex-end;
 `;
 
-const NavLink = styled(Link)`
-  padding: 20px;
-  color: white;
-  text-decoration: none;
-  &:hover {
-    color: red;
-    background: blue;
-  }
-`;
-const NavLin = styled(Link)`
+const NavLin = styled.a`
   margin-right: 5px;
   margin-left: 5px;
   padding: 20px;
@@ -76,9 +67,9 @@ export default  function Navi() {
           </Dots>
           
           <Nav>
-          <NavLin to="/about" target="_blank">About</NavLin>
+          <NavLin href="/#form">Contact</NavLin>
           
-          <NavLin to="/about" target="_blank">About</NavLin>
+          <NavLin href="/#about">About</NavLin>
          
             </Nav>
                           

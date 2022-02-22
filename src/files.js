@@ -1,4 +1,3 @@
-import React from "react"
 import IMG from "./asset/osas.jpg"
 
 export const Stock = [
@@ -39,7 +38,7 @@ export const Stock = [
 
     }
 ]
- 
+
 export const AboutId = [{
         id: 1,
         heading2: 'React',
