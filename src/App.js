@@ -16,9 +16,11 @@ const S1 = styled.div`
     overflow: auto;
     background-color: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
-    transition: all .5s;
+   
+    
 
-`
+
+`;
 
 
 
@@ -48,16 +50,14 @@ function App() {
         <Navi/>
         <Side/>
 
-       </MainC>
+        </MainC>
         <About/>
+        
         <CardList Stock={Stock}/>
         <Form/>
         <Footer/>
+       </S1>
        
-        </S1>
-       
-       
-
         </BrowserRouter>
         </ThemeProvider>
 

@@ -1,39 +1,7 @@
-.left .img {
-    border: 2px solid var(--borderColor);
-}
-
-img {
+.img img {
     display: block;
     margin: 0 auto;
     height: 200px;
     width: 200px;
     object-fit: cover;
-}
-
-.h3 {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 25px;
-}
-
-.side-dot {
-    display: flex;
-    align-content: center;
-}
-
-.pa {
-    font-size: 12px;
-    font-style: italic;
-    text-align: center;
-    padding-top: 10px;
-}
-
-.pre h3 {
-    padding: 10px;
-    font-size: 2em;
-}
-
-pre p {
-    color: #4b5156;
-    font-family: "Roboto Mono", monospace;
 }

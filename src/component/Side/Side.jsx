@@ -7,64 +7,6 @@ import {applyTheme} from "../../redux/actionTheme"
 import{ darkTheme, lightTheme ,greenTheme,partyTheme} from '../../component/Theme';
 import styled from 'styled-components';
 
-const Size = styled.div`
-display: flex;
-justify-content: space-evenly;
-//background-color: #fff;
--webkit-box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
--moz-box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
-box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
-background-color: ${props => props.theme.secondaryColor};
-@media (max-width: 800px) {
-        display: flex;
-        flex-direction: column;
-    }
-`
-
-const Left = styled.div`
-display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    
-
-`;
-
-
-const Dots =styled.div`
-height: 30px;
-width: 30px;
-background-color: #fff;
-border-radius: 50%;
-margin: 5px;
-border: 2px solid ${props => props.theme.themeDotBorder};
--webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
--moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-cursor: pointer;
-&:hover{
-    border-width: 5px;
-
-}
-`;
-
-const Dot1 =styled(Dots)`
-
-background-color: #192734;
-border: 2px solid ${props => props.theme.themeDotBorder};
-`;
-const Dot2 =styled(Dots)`
-
-background-color: #78866b;
-border: 2px solid ${props => props.theme.themeDotBorder};
-`;
-const Dot3 =styled(Dots)`
-
-background-color: #7E4C74;
-border: 2px solid ${props => props.theme.themeDotBorder};
-`;
 
 export default function Side() {
    const dispatch = useDispatch();
@@ -115,6 +57,86 @@ export default function Side() {
         </Size>
     )
 }
+const Size = styled.div`
+display: flex;
+justify-content: space-evenly;
+//background-color: #fff;
+-webkit-box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
+box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.75);
+background-color: ${props => props.theme.secondaryColor};
+@media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
+
+const Left = styled.div`
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    .img {
+        border: 2px solid${props => props.theme.borderColor};
+    }
+        .h3 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-size: 25px;
+        }
+        
+        .side-dot {
+            display: flex;
+            align-content: center;
+        
+    }
+    .pa {
+        font-size: 12px;
+        font-style: italic;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+
+`;
+
+
+const Dots =styled.div`
+height: 30px;
+width: 30px;
+background-color: #fff;
+border-radius: 50%;
+margin: 5px;
+border: 2px solid ${props => props.theme.themeDotBorder};
+-webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+cursor: pointer;
+&:hover{
+    border-width: 5px;
+
+}
+`;
+
+const Dot1 =styled(Dots)`
+
+background-color: #192734;
+border: 2px solid ${props => props.theme.themeDotBorder};
+`;
+const Dot2 =styled(Dots)`
+
+background-color: #78866b;
+border: 2px solid ${props => props.theme.themeDotBorder};
+`;
+const Dot3 =styled(Dots)`
+
+background-color: #7E4C74;
+border: 2px solid ${props => props.theme.themeDotBorder};
+`;
+
 
 
 const Right = styled.div`

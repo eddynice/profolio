@@ -6,14 +6,14 @@ const Globalsty = createGlobalStyle `
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif
-    transition: all 0.3s ease 0s;
-    scroll-behavior: smooth;
-
+    transition: 0.3s;
+    
+    font-family: 'Josefin Sans', sans-serif;
 p, li, span, label, input, textarea {
         color: ${props => props.theme.secondaryText}
      }
     }
     
     `
+
 export default Globalsty

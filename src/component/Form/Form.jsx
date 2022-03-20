@@ -1,7 +1,6 @@
 import React,{ useState} from 'react';
 //import axios from 'axios'
 import styled from 'styled-components';
-import "./foem.css"
 const Form=()=>{
 	const [name, setName]=useState('') 
 	const [email, setEmail]=useState('')
@@ -75,6 +74,14 @@ export default Form
 
 const Forms = styled.div`
 background-color: ${props => props.theme.secondaryColor};
+.h2 {
+    text-align: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-size: 27px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
 
 `;
 
@@ -85,13 +92,25 @@ margin: 0 auto;
 border: 1px solid ${props => props.theme.borderColor};
 padding: 15px;
 border-radius: 5px;
-background-color: ${props => props.theme.mainColor}
+background-color: ${props => props.theme.mainColor};
 margin-bottom: 50px;
+label {
+    line-height: 2.7em;
+}
+
 
 `;
 const Input = styled.input`
     background-color:${props => props.theme.secondaryColor};
     border: 1px solid ${props => props.theme.borderColor};
+	
+		width:100%;
+		padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+
+	
 `;
 
 
@@ -100,6 +119,10 @@ min-height: 100px;
 font-size: 14px;
 background-color:${props => props.theme.secondaryColor};
     border: 1px solid ${props => props.theme.borderColor};
+	width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
 `;
 
 const Button = styled.button`
