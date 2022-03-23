@@ -13,7 +13,7 @@ export default function Side() {
 
 
    const changeTheme = (theme) => {
-     console.log(theme)
+   
      dispatch(applyTheme(theme));
      dispatch(applyTheme(theme));
    }

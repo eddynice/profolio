@@ -42,9 +42,10 @@ background-color: ${props => props.theme.bgColor};
 border: 2px solid ${props => props.theme.borderColor};
 h1{
     text-align: center;
-    font-size: 27px;
-    font-weight: 500;
+    font-size: 35px;
+    
     padding-top: 20px;
+
     padding-bottom: 20px; 
 }
 .cardItem {

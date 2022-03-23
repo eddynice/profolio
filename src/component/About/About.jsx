@@ -1,5 +1,5 @@
 import "./about.css";
-import com from "../../asset/osas.jpg"
+import com from "../../asset/webfor.png"
 import styled from 'styled-components';
 
 
@@ -45,9 +45,9 @@ const About =()=>{
                 </div>
                 <h1 style={{padding:"15px", fontSize:"30px"}}>Find me on Twitter & Youtube</h1>
                 
-                <NavLin href="/https://www.instagram.com/obayomimartins_/?hl=en">YouTube: @DennisIvy
+                <NavLin href="https://www.facebook.com/osazee.endurance.7">Facebook: Tru Osas
 </NavLin>
-                <NavLin href="https://www.instagram.com/obayomimartins_/?hl=en">facebook</NavLin>
+                <NavLin href="https://twitter.com/eddynics">Twitter</NavLin>
                 
                 </div>
 

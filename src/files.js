@@ -1,4 +1,5 @@
-import IMG from "./asset/osas.jpg"
+import IMG from "./asset/web.png"
+import IMG2 from "./asset/login.png"
 
 export const Stock = [
 
@@ -22,7 +23,7 @@ export const Stock = [
         heading3: "oodocjchccyh",
         heading4: "osareniye osas",
         link: "more",
-        Image: "src/asset/osas.jpg",
+        Image: IMG2,
 
     },
     {

@@ -12,7 +12,7 @@ const CardItem = ({para,Image,heading3,link})=>{
         <div style={{padding:"15px"}}>
         <h3> {heading3}</h3>
         <p>{para}</p>
-         <a href="osa.com">{link}</a>
+         <a href="https://truosa.netlify.app/">{link}</a>
            </div>
         
         </Item>
@@ -28,7 +28,7 @@ const Item = styled.div`
 border-radius: 5px 5px 0 0;
     border: 1px solid rgb(48, 12, 180);
     width: 380px;
-    background-color: #fff;
+    
     margin-right: 20px;
     overflow: hidden;
     border: 1px solid ${props => props.theme.borderColor};
